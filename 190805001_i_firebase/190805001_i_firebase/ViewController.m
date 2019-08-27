@@ -25,14 +25,47 @@
     [button addTarget:self action:@selector(crashButtonTapped:)
      forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setValue:@"MAIN"            forKey:@"screen"];
+    [params setValue:@"test"            forKey:@"event"];
+    [params setValue:@"Function Call"   forKey:@"action"];
+    [self faLog:@"MAIN" params:params];
+    
+    
+    NSString *contentType = @"testType";
+    NSString *itemId = @"test0001";
+    
+    [FIRAnalytics logEventWithName: kFIREventSelectContent
+                        parameters:@{
+                                     kFIRParameterContentType: contentType,
+                                     kFIRParameterItemID: itemId
+                                     }];
 }
 
 - (IBAction)crashButtonTapped:(id)sender {
+
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setValue:@"MAIN"        forKey:@"screen"];
+    [params setValue:@"Crash"       forKey:@"event"];
+    [params setValue:@"Button Clic" forKey:@"action"];
+    [params setValue:CommonTest     forKey:Common];
+    [self faLog2:@"MAIN" params:params];
+    
     [[Crashlytics sharedInstance] crash];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+}
+
+- (void)faLog:(NSString *)name params : (NSDictionary *)params {
+    [FIRAnalytics logEventWithName:name parameters:params];
+}
+
+- (void)faLog2:(NSString *)name params : (NSDictionary *)params {
+    [FIRAnalytics logEventWithName:kFIREventSelectContent parameters:params];
 }
 
 @end

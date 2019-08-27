@@ -33,6 +33,7 @@
 		8912B55822F7B65600D50BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8912B55922F7B65600D50BF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8912B56022F7B74000D50BF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8912B59822FC012C00D50BF8 /* CommonData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonData.h; sourceTree = "<group>"; };
 		989E16482C3D6503B2B14795 /* Pods_190805001_i_firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_190805001_i_firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,17 +70,18 @@
 		8912B54622F7B65500D50BF8 /* 190805001_i_firebase */ = {
 			isa = PBXGroup;
 			children = (
-				8912B55822F7B65600D50BF8 /* Info.plist */,
-				8912B56022F7B74000D50BF8 /* GoogleService-Info.plist */,
-				8912B55922F7B65600D50BF8 /* main.m */,
-				8912B55022F7B65500D50BF8 /* _90805001_i_firebase.xcdatamodeld */,
 				8912B55322F7B65600D50BF8 /* Assets.xcassets */,
 				8912B54D22F7B65500D50BF8 /* Main.storyboard */,
 				8912B55522F7B65600D50BF8 /* LaunchScreen.storyboard */,
+				8912B55922F7B65600D50BF8 /* main.m */,
+				8912B55822F7B65600D50BF8 /* Info.plist */,
+				8912B56022F7B74000D50BF8 /* GoogleService-Info.plist */,
+				8912B55022F7B65500D50BF8 /* _90805001_i_firebase.xcdatamodeld */,
 				8912B54722F7B65500D50BF8 /* AppDelegate.h */,
 				8912B54822F7B65500D50BF8 /* AppDelegate.m */,
 				8912B54A22F7B65500D50BF8 /* ViewController.h */,
 				8912B54B22F7B65500D50BF8 /* ViewController.m */,
+				8912B59822FC012C00D50BF8 /* CommonData.h */,
 			);
 			path = 190805001_i_firebase;
 			sourceTree = "<group>";
@@ -297,7 +299,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
